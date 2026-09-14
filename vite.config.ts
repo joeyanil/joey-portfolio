@@ -10,6 +10,12 @@ export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
-    server: { entry: "server" },
+    server: {
+      entry: "server",
+      // Cloudflare Pages (not Workers) expects a `dist/` folder containing
+      // static assets plus a `_worker.js` Pages Function — this preset makes
+      // Nitro emit exactly that shape instead of the Workers module format.
+      preset: "cloudflare_pages",
+    },
   },
 });
