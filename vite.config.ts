@@ -10,12 +10,6 @@ export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
-    server: {
-      entry: "server",
-      // Override the wrapper's default Cloudflare build target so Nitro emits
-      // output Vercel Functions can actually serve, instead of Cloudflare
-      // Worker-format output (which causes 404s on every route on Vercel).
-      preset: "vercel",
-    },
+    server: { entry: "server" },
   },
 });
