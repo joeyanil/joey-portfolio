@@ -8,15 +8,15 @@ A personal portfolio site for Joey, a full-stack developer. Single-page, animate
 
 The site is one scrolling page made up of self-contained sections:
 
-| Section | File | What it shows |
-| --- | --- | --- |
-| Header / Nav | `HeroSection.tsx` | Sticky nav links + animated hero heading and portrait |
-| Marquee | `MarqueeSection.tsx` | Scrolling logo/image strip |
-| About | `AboutSection.tsx` | Bio copy with a scroll-reveal text animation |
-| Skills | `SkillsSection.tsx` | Auto-scrolling row of tech/skill pills |
-| Services | `ServicesSection.tsx` | Numbered list of services offered |
-| Projects | `ProjectsSection.tsx` | Scroll-driven stacked project cards |
-| Footer / Contact | `FooterSection.tsx` | Call to action, email, and social links |
+| Section          | File                  | What it shows                                         |
+| ---------------- | --------------------- | ----------------------------------------------------- |
+| Header / Nav     | `HeroSection.tsx`     | Sticky nav links + animated hero heading and portrait |
+| Marquee          | `MarqueeSection.tsx`  | Scrolling logo/image strip                            |
+| About            | `AboutSection.tsx`    | Bio copy with a scroll-reveal text animation          |
+| Skills           | `SkillsSection.tsx`   | Auto-scrolling row of tech/skill pills                |
+| Services         | `ServicesSection.tsx` | Numbered list of services offered                     |
+| Projects         | `ProjectsSection.tsx` | Scroll-driven stacked project cards                   |
+| Footer / Contact | `FooterSection.tsx`   | Call to action, email, and social links               |
 
 ## Tech stack
 
@@ -64,14 +64,14 @@ The dev server prints a local URL (defaults to Vite's dev port) — open it in y
 
 ## Available scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the Vite dev server |
-| `npm run build` | Production build (outputs to `.output/`) |
-| `npm run build:dev` | Build in development mode |
-| `npm run preview` | Preview a production build locally |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Format the codebase with Prettier |
+| Command             | Description                              |
+| ------------------- | ---------------------------------------- |
+| `npm run dev`       | Start the Vite dev server                |
+| `npm run build`     | Production build (outputs to `.output/`) |
+| `npm run build:dev` | Build in development mode                |
+| `npm run preview`   | Preview a production build locally       |
+| `npm run lint`      | Run ESLint                               |
+| `npm run format`    | Format the codebase with Prettier        |
 
 ## Deployment
 
