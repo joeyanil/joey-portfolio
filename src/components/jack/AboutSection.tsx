@@ -56,7 +56,7 @@ export function AboutSection() {
 
       <div className="relative z-10 flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
         <AnimatedText
-          text="I'm Joey, a full-stack, code-focused developer building practical software and exploring the systems behind it."
+          text="I'm Joey, a full-stack developer who likes building things from the ground up. I'm curious about how systems work, enjoy figuring out problems that don't have obvious answers, and spend a lot of time learning, studying, and turning ideas into software I can actually use."
           className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px]"
           style={{ fontSize: "clamp(1rem, 2vw, 1.35rem)" }}
         />

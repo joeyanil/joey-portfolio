@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeIn } from "./FadeIn";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 import projectYugenAi from "@/assets/project-yugenai.png";
 import projectRegimEdge from "@/assets/project-regimedge.png";
@@ -43,10 +44,11 @@ const PROJECTS: Project[] = [
   },
   {
     n: "04",
-    category: "School Management System",
-    name: "K2 / Kilinto 2 HS",
+    category: "School Management Platform",
+    name: "School Management Platform",
     image: projectK2,
-    description: "School management system for KILINTO Number 2 High School.",
+    description:
+      "A digital platform for managing student information, academic records, and everyday school operations.",
     status: "In Development",
   },
 ];
@@ -62,6 +64,7 @@ function ProjectCard({
   total: number;
   progress: ReturnType<typeof useScroll>["scrollYProgress"];
 }) {
+  const isMobile = useIsMobile();
   const targetScale = 1 - (total - 1 - index) * 0.03;
 
   const scale = useTransform(
@@ -72,11 +75,11 @@ function ProjectCard({
 
   return (
     <div
-      className="sticky top-24 md:top-32"
+      className="md:sticky md:top-24 lg:top-32"
       style={{ top: `${index * 28 + 96}px` }}
     >
       <motion.div
-        style={{ scale }}
+        style={{ scale: isMobile ? 1 : scale }}
         className="
           rounded-[40px] sm:rounded-[50px] md:rounded-[60px]
           border border-white/10
@@ -136,8 +139,9 @@ function ProjectCard({
 
         {/* Images */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-          {/* Left */}
-          <div className="md:col-span-2 flex flex-col gap-4">
+          {/* Left — desktop-only accent crops (hidden on mobile so the same
+              source image isn't repeated three times in one column) */}
+          <div className="hidden md:flex md:col-span-2 md:flex-col gap-4">
             <img
               src={project.image}
               alt={project.name}
@@ -178,15 +182,14 @@ function ProjectCard({
               alt={project.name}
               loading="lazy"
               className="
-                w-full h-full object-cover
+                w-full object-cover
                 rounded-[35px] md:rounded-[45px]
                 border border-white/10
                 hover:scale-[1.01]
                 transition-all duration-300
+                h-[clamp(220px,62vw,380px)]
+                md:h-full md:min-h-full
               "
-              style={{
-                minHeight: "100%",
-              }}
             />
           </div>
         </div>
@@ -237,7 +240,7 @@ export function ProjectsSection() {
         {PROJECTS.map((project, index) => (
           <div
             key={project.n}
-            className="h-[85vh]"
+            className="mb-8 sm:mb-10 md:mb-0 md:h-[85vh]"
           >
             <ProjectCard
               project={project}

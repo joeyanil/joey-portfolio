@@ -34,13 +34,31 @@ export function AnimatedText({ text, className, style }: AnimatedTextProps) {
     offset: ["start 0.8", "end 0.2"],
   });
 
-  const chars = text.split("");
+  const totalChars = text.length;
+  // Split into word / whitespace tokens so each word wraps as one unit
+  // (no mid-word line breaks) while spaces stay as valid break points.
+  const tokens = text.match(/\S+|\s+/g) ?? [];
+  let charIndex = 0;
+
   return (
     <p ref={ref} className={className} style={style}>
-      {chars.map((c, i) => {
-        const start = i / chars.length;
-        const end = start + 1 / chars.length;
-        return <Char key={i} char={c} progress={scrollYProgress} range={[start, end]} />;
+      {tokens.map((token, tokenIndex) => {
+        const isWhitespace = /^\s+$/.test(token);
+        const chars = token.split("").map((c) => {
+          const i = charIndex;
+          charIndex += 1;
+          const start = i / totalChars;
+          const end = (i + 1) / totalChars;
+          return <Char key={i} char={c} progress={scrollYProgress} range={[start, end]} />;
+        });
+
+        return isWhitespace ? (
+          <span key={tokenIndex}>{chars}</span>
+        ) : (
+          <span key={tokenIndex} className="inline-block">
+            {chars}
+          </span>
+        );
       })}
     </p>
   );
