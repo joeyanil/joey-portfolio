@@ -2,7 +2,7 @@
 
 A personal portfolio site for Joey, a full-stack developer. Single-page, animated landing page built with React, TypeScript, and Tailwind CSS, server-rendered via TanStack Start.
 
-🌐 **Live site:** [joey-a.pages.dev](https://joey-a.pages.dev/)
+🌐 **Live site:** [View Portfolio](https://joey-a.pages.dev/)
 
 ## Preview
 
