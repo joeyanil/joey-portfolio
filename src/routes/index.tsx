@@ -20,8 +20,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content:
-          "Joey · A | Full-Stack Developer",
+        content: "Joey · A | Full-Stack Developer",
       },
       {
         property: "og:description",
