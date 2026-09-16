@@ -84,10 +84,7 @@ export function ServicesSection() {
                   hover:-translate-y-1
                 "
                 style={{
-                  borderTop:
-                    i === 0
-                      ? "1px solid rgba(255,255,255,0.12)"
-                      : undefined,
+                  borderTop: i === 0 ? "1px solid rgba(255,255,255,0.12)" : undefined,
                   borderBottom: "1px solid rgba(255,255,255,0.12)",
                 }}
               >

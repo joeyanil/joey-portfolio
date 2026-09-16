@@ -1,8 +1,4 @@
-export function ContactButton({
-  href = "mailto:joeyanley.tech@gmail.com",
-}: {
-  href?: string;
-}) {
+export function ContactButton({ href = "mailto:joeyanley.tech@gmail.com" }: { href?: string }) {
   return (
     <a
       href={href}

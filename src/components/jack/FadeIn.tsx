@@ -22,7 +22,7 @@ export function FadeIn({
   className,
   style,
 }: FadeInProps) {
-  const Comp = motion.create(as as any);
+  const Comp = motion.create(as);
   return (
     <Comp
       initial={{ opacity: 0, x, y }}

@@ -1,14 +1,9 @@
 import { FadeIn } from "./FadeIn";
-import {
-  FaGithub,
-  FaTelegram,
-  FaInstagram,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaGithub, FaTelegram, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 export function FooterSection() {
   return (
-    <footer className="bg-[#0C0C0C] px-5 sm:px-8 md:px-10 pt-24 pb-10" id ="contact">
+    <footer className="bg-[#0C0C0C] px-5 sm:px-8 md:px-10 pt-24 pb-10" id="contact">
       <div className="max-w-7xl mx-auto">
         {/* CTA */}
         <FadeIn y={40}>
@@ -71,9 +66,7 @@ export function FooterSection() {
               "
             >
               <FaEnvelope size={20} />
-              <span className="text-lg">
-                joeyanley.tech@gmail.com
-              </span>
+              <span className="text-lg">joeyanley.tech@gmail.com</span>
             </a>
           </div>
         </FadeIn>
@@ -130,9 +123,7 @@ export function FooterSection() {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="text-white/40 text-sm">
-            © 2026 Joey · A. All rights reserved.
-          </span>
+          <span className="text-white/40 text-sm">© 2026 Joey · A. All rights reserved.</span>
 
           <span className="text-white/40 text-sm uppercase tracking-[0.2em]">
             Designed & Developed by Joey · A

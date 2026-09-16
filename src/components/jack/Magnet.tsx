@@ -31,8 +31,7 @@ export function Magnet({
       const dx = e.clientX - cx;
       const dy = e.clientY - cy;
       const within =
-        Math.abs(dx) < rect.width / 2 + padding &&
-        Math.abs(dy) < rect.height / 2 + padding;
+        Math.abs(dx) < rect.width / 2 + padding && Math.abs(dy) < rect.height / 2 + padding;
       if (within) {
         setActive(true);
         setPos({ x: dx / strength, y: dy / strength });

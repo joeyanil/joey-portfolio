@@ -31,8 +31,7 @@ const PROJECTS: Project[] = [
     category: "FinTech / P2P Exchange",
     name: "RegimEdge",
     image: projectRegimEdge,
-    description:
-      "P2P exchange platform for Ethiopian users, trading USDT and Ethiopian Birr.",
+    description: "P2P exchange platform for Ethiopian users, trading USDT and Ethiopian Birr.",
   },
   {
     n: "03",
@@ -67,17 +66,10 @@ function ProjectCard({
   const isMobile = useIsMobile();
   const targetScale = 1 - (total - 1 - index) * 0.03;
 
-  const scale = useTransform(
-    progress,
-    [index / total, 1],
-    [1, targetScale]
-  );
+  const scale = useTransform(progress, [index / total, 1], [1, targetScale]);
 
   return (
-    <div
-      className="md:sticky md:top-24 lg:top-32"
-      style={{ top: `${index * 28 + 96}px` }}
-    >
+    <div className="md:sticky md:top-24 lg:top-32" style={{ top: `${index * 28 + 96}px` }}>
       <motion.div
         style={{ scale: isMobile ? 1 : scale }}
         className="
@@ -207,7 +199,8 @@ export function ProjectsSection() {
   });
 
   return (
-    <section id="projects"
+    <section
+      id="projects"
       ref={containerRef}
       className="
         px-5 sm:px-8 md:px-10
@@ -215,10 +208,7 @@ export function ProjectsSection() {
         bg-[#0C0C0C]
       "
     >
-      <FadeIn
-        y={40}
-        className="text-center mb-16 sm:mb-20 md:mb-28"
-      >
+      <FadeIn y={40} className="text-center mb-16 sm:mb-20 md:mb-28">
         <h2
           className="
             hero-heading
@@ -238,10 +228,7 @@ export function ProjectsSection() {
 
       <div className="max-w-7xl mx-auto">
         {PROJECTS.map((project, index) => (
-          <div
-            key={project.n}
-            className="mb-8 sm:mb-10 md:mb-0 md:h-[85vh]"
-          >
+          <div key={project.n} className="mb-8 sm:mb-10 md:mb-0 md:h-[85vh]">
             <ProjectCard
               project={project}
               index={index}

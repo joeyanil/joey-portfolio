@@ -3,20 +3,11 @@ import { Magnet } from "./Magnet";
 import { ContactButton } from "./ContactButton";
 import heroPortrait from "@/assets/joey-portrait.png";
 
-const NAV_LINKS = [
-  "About",
-  "Skills",
-  "Services",
-  "Projects",
-  "Contact",
-];
+const NAV_LINKS = ["About", "Skills", "Services", "Projects", "Contact"];
 
 export function HeroSection() {
   return (
-    <section
-      className="h-screen flex flex-col relative"
-      style={{ overflowX: "clip" }}
-    >
+    <section className="h-screen flex flex-col relative" style={{ overflowX: "clip" }}>
       {/* Navbar */}
       <FadeIn
         as="nav"
@@ -100,8 +91,7 @@ export function HeroSection() {
               fontSize: "clamp(0.75rem, 1.4vw, 1.5rem)",
             }}
           >
-            Full-stack developer building practical software
-            and exploring the systems behind it.
+            Full-stack developer building practical software and exploring the systems behind it.
           </p>
         </FadeIn>
 

@@ -86,13 +86,7 @@ const row3 = [
   { Icon: SiVercel, name: "Vercel", color: "#FFFFFF" },
 ];
 
-function SkillRow({
-  skills,
-  reverse = false,
-}: {
-  skills: typeof row1;
-  reverse?: boolean;
-}) {
+function SkillRow({ skills, reverse = false }: { skills: typeof row1; reverse?: boolean }) {
   return (
     <motion.div
       animate={{
@@ -125,9 +119,7 @@ function SkillRow({
           >
             <Icon size={36} color={skill.color} />
 
-            <span className="text-white font-medium text-lg">
-              {skill.name}
-            </span>
+            <span className="text-white font-medium text-lg">{skill.name}</span>
           </div>
         );
       })}
@@ -137,10 +129,7 @@ function SkillRow({
 
 export function SkillsSection() {
   return (
-    <section id="skills"
-      className="py-24 overflow-hidden"
-      style={{ background: "#0C0C0C" }}
-    >
+    <section id="skills" className="py-24 overflow-hidden" style={{ background: "#0C0C0C" }}>
       <FadeIn y={40}>
         <h2
           className="
